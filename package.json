@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "dev": "tsx src/index.ts --watch",
+    "dev": "tsx watch src/index.ts",
     "lint": "oxlint",
     "test": "vitest",
     "format": "prettier --write ."
@@ -29,6 +29,8 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "@hono/node-server": "^1.19.3",
+    "fast-xml-parser": "^5.2.5",
     "tsx": "^4.20.5"
   }
 }

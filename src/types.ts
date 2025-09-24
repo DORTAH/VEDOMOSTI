@@ -13,6 +13,6 @@ export type RssItem = {
 
 export type InputParams = {
   category: string;
-  limit: number;
-  offset: number;
+  limit?: number;
+  offset?: number;
 };
