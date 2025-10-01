@@ -1,4 +1,4 @@
-const VEDOMOSTI_BASE_URL = 'https://www.vedomosti.ru'
+export const VEDOMOSTI_BASE_URL = 'https://www.vedomosti.ru'
 
 const VEDOMOSTI_INFO_ENDPOINT = '/info/rss'
 const VEDOMOSTI_RUBRICS_ENDPOINT = '/rss/rubric'
@@ -11,9 +11,10 @@ export async function fetchInfo() {
         if (!response.ok) {
             throw new Error(response.statusText)
         }
-        console.log(await response.text())
+        const xmlText = await response.text()
+        return xmlText
     } catch (error) {
-        console.log(error)
+        throw error
     }
 }
 
